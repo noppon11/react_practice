@@ -1,8 +1,8 @@
 import Transaction from "./components/Transaction";
+import './components/Apps.css'
 
-const Title =()=><h1>Program salary account</h1>
-const Description =()=> <p> Note account data per days</p>
-
+const design = {color:"red",textAlign: "Center", fontsize:"1.5rem"}
+const Description =()=> <h1 style={design}> Note account data per days</h1>
 function App() {
   return (
     // <div>
@@ -16,8 +16,7 @@ function App() {
     // </div>
 
     // <React.Fragment>
-    <div>
-      <Title/>
+    <div class="container">
       <Description/>
       <Transaction/>
     </div>
