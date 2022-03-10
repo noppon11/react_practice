@@ -1,21 +1,21 @@
-
+import { useContext } from "react";
+import DataContext from "../data/DataContect";
 import Item from"./Item";
 import './Transaction.css'
-import { v4 as uuidv4 } from 'uuid';
 
-const Transaction =(PropsType)=> {
-    const data = [
-      {title:"heath price" , amount:2_500 },
-      {title:"salary", amount: 40_000 },
-      {title:"daily price", amount: 1_500},
-      {title:"water monthly", amount: 300},
-      {title:"insurance", amount: 300},
-    ]
-    return (<ul className= "item-list">
-      {data.map(element=>{
-        return <Item {...element} key={uuidv4()} />
-      })}
-    </ul>
-  );
+
+const Transaction =(props)=> {
+    const {items} = props
+    const {income, expense} = useContext(DataContext)
+    return (
+    <div>
+      <ul className= "item-list">
+        {items.map(element=>{
+          return <Item {...element} key={element.id} />
+        })}
+      </ul>
+
+    </div>
+    );
 }
-export default Transaction;
+export default Transaction
