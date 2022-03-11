@@ -6,7 +6,6 @@ import './Transaction.css'
 
 const Transaction =(props)=> {
     const {items} = props
-    const {income, expense} = useContext(DataContext)
     return (
     <div>
       <ul className= "item-list">
@@ -14,7 +13,6 @@ const Transaction =(props)=> {
           return <Item {...element} key={element.id} />
         })}
       </ul>
-
     </div>
     );
 }

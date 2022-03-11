@@ -48,7 +48,7 @@ const FormComponent =(props)=>{
         </div>
       </form>
     </div>
-        )
+  )
 }
 
-export default FormComponent;
+export default FormComponent
